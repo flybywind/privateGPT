@@ -64,23 +64,22 @@ class MyElmLoader(UnstructuredEmailLoader):
 
 # Map file extensions to document loaders and their arguments
 LOADER_MAPPING = {
-    ".csv": (CSVLoader, {}),
-    # ".docx": (Docx2txtLoader, {}),
-    ".doc": (UnstructuredWordDocumentLoader, {}),
-    ".docx": (UnstructuredWordDocumentLoader, {}),
-    ".enex": (EverNoteLoader, {}),
-    ".eml": (MyElmLoader, {}),
-    ".epub": (UnstructuredEPubLoader, {}),
-    ".html": (UnstructuredHTMLLoader, {}),
-    ".md": (UnstructuredMarkdownLoader, {}),
-    ".odt": (UnstructuredODTLoader, {}),
-    ".pdf": (PyMuPDFLoader, {}),
-    ".ppt": (UnstructuredPowerPointLoader, {}),
-    ".pptx": (UnstructuredPowerPointLoader, {}),
-    ".txt": (TextLoader, {"encoding": "utf8"}),
+    # ".csv": (CSVLoader, {}),
+    # # ".docx": (Docx2txtLoader, {}),
+    # ".doc": (UnstructuredWordDocumentLoader, {}),
+    # ".docx": (UnstructuredWordDocumentLoader, {}),
+    # ".enex": (EverNoteLoader, {}),
+    # ".eml": (MyElmLoader, {}),
+    # ".epub": (UnstructuredEPubLoader, {}),
+    # ".html": (UnstructuredHTMLLoader, {}),
+    # ".md": (UnstructuredMarkdownLoader, {}),
+    # ".odt": (UnstructuredODTLoader, {}),
+    # ".pdf": (PyMuPDFLoader, {}),
+    # ".ppt": (UnstructuredPowerPointLoader, {}),
+    # ".pptx": (UnstructuredPowerPointLoader, {}),
+    # ".txt": (TextLoader, {"encoding": "utf8"}),
     # Add more mappings for other file extensions and loaders as needed
-    ".db": (SQLite3Loader, {"db_path": "/Users/flybywindwen/Projects/spiders/Ahospital/sqlite/HospitalSpider.db", 
-                            "table_name": "hospitalspider", "page_content_column":"paragragh"}),
+    ".db": (SQLite3Loader, {"table_name": "hospitalspider", "page_content_column":"paragragh"}),
 }
 
 
