@@ -19,6 +19,7 @@ from langchain.document_loaders import (
     UnstructuredPowerPointLoader,
     UnstructuredWordDocumentLoader,
 )
+from Sqlite3Loader import SQLite3Loader
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
@@ -78,6 +79,8 @@ LOADER_MAPPING = {
     ".pptx": (UnstructuredPowerPointLoader, {}),
     ".txt": (TextLoader, {"encoding": "utf8"}),
     # Add more mappings for other file extensions and loaders as needed
+    ".db": (SQLite3Loader, {"db_path": "/Users/flybywindwen/Projects/spiders/Ahospital/sqlite/HospitalSpider.db", 
+                            "table_name": "hospitalspider", "page_content_column":"paragragh"}),
 }
 
 
